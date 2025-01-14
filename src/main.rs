@@ -1,11 +1,12 @@
 use std::io; 
+use std::error::Error;
 
 fn main() {
 
 /// finbonacci(x:i32) -> i64
 /// Evalue la valeur du n-ième terme de la suite de fibonacci de façon itérative     
     fn fibonacci(x: i32)-> i64 {
-        if x<0 {return x.into(); }
+        if x<0 {panic!("Invalid Input");}
         let mut i: i64= 0;
         if x == 0 { return i;}
         let mut j: i64 = 1;
